@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shadow Echo - Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- Mobile Controls -->
+        <div id="mobile-controls">
+            <div id="left-joystick" class="joystick-area">
+                <div class="joystick-base">
+                    <div class="joystick-thumb"></div>
+                </div>
+            </div>
+            
+            <div id="action-buttons">
+                <button id="jump-button" class="action-button">Jump</button>
+                <button id="shadow-button" class="action-button">Shadow</button>
+            </div>
+        </div>
+        
+        <!-- Game UI -->
+        <div id="game-ui">
+            <div id="shadow-meter-container">
+                <div id="shadow-meter"></div>
+            </div>
+            <div id="level-name"></div>
+        </div>
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay">
+            <h1>Shadow Echo</h1>
+            <p>A dark atmospheric platformer</p>
+            <button id="start-button">Start Game</button>
+            <p class="instructions">
+                Mobile: Use left joystick to move, buttons to jump and activate shadow form<br>
+                Desktop: Arrow keys to move, Space to jump, Shift for shadow form
+            </p>
+        </div>
+        
+        <!-- Level Complete Screen -->
+        <div id="level-complete" class="overlay hidden">
+            <h2>Level Complete</h2>
+            <button id="next-level-button">Next Level</button>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="game-over" class="overlay hidden">
+            <h2>Game Over</h2>
+            <button id="retry-button">Try Again</button>
+        </div>
+        
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="overlay">
+            <h2>Loading...</h2>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    
+    <script src="engine.js"></script>
+    <script src="levels.js"></script>
+    <script src="player.js"></script>
+    <script src="controls.js"></script>
+    <script src="game.js"></script>
+    <script src="mobile_optimizations.js"></script>
+</body>
+</html>
